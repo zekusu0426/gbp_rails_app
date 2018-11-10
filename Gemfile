@@ -49,6 +49,11 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  # 以下追記
+  gem 'capistrano'
+  gem 'capistrano-bundler'
+  gem 'capistrano-rails'
+  gem 'capistrano-rbenv'
 end
 
 group :test do
@@ -64,5 +69,8 @@ end
 
 # 以下追加
 group :production, :staging do
+  # mysql用
   gem 'mysql2'
+  # add
+  gem 'unicorn'
 end
